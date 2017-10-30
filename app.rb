@@ -9,5 +9,10 @@ configure :development do
 end
 
 get '/' do
-  'Hello world!'
+  @usernames = [ 'ssaunier', 'Papillard' ]
+  erb :layout
+end
+
+get '/about' do
+  erb :about
 end
